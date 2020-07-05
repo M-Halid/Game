@@ -1,0 +1,469 @@
+html {
+    height: 640px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    background-image: linear-gradient(#006699, #00cc99)
+}
+
+#App {
+    border-radius: 15px;
+    margin: auto !important;
+    padding: 0 !important;
+    width: 360px !important;
+    height: 620px !important;
+    box-sizing: border-box !important;
+    background-image: linear-gradient(#006699, #00cc99)
+}
+
+#root {
+    margin: auto !important;
+    padding: 0 !important;
+    width: 360px !important;
+    height: 620px !important;
+    box-sizing: border-box !important;
+    background-image: linear-gradient(#006699, #00cc99)
+}
+
+body {
+    border-radius: 10px;
+    margin: auto !important;
+    padding: 0 !important;
+    width: 360px !important;
+    height: 620px !important;
+    box-sizing: border-box !important;
+    background-image: linear-gradient(#006699, #00cc99)
+}
+
+
+
+#frame {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all 1.5s ease;
+
+    margin: 8px auto 0px auto !important;
+    display: grid;
+    width: 360px !important;
+    height: 620px !important;
+    grid-template-rows: 1fr 60px 4fr 2fr;
+    background-image: linear-gradient(#006699, #00cc99)
+}
+
+/* #frame {
+    transform: rotate(180deg);
+} */
+
+#top {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-evenly;
+    background-color: burlywod;
+}
+
+
+#game {
+    font-weight: bold;
+    font-size: 16px;
+    padding-top: 10px !important;
+}
+
+#can {
+    transition: all 0.4s ease;
+    width: 0;
+    max-width: 95px;
+    background-color: rgb(103, 207, 5);
+    height: 20px;
+}
+
+#time {
+    color: azure;
+    font-weight: bold;
+    font-size: 16px;
+    padding-top: 10px !important;
+}
+
+#saat {
+    display: block;
+    margin: auto;
+    width: 30px;
+}
+
+#starbucks {
+    height: 60px;
+
+}
+
+.yildiz {
+
+
+    width: 30px;
+    height: 25x;
+    padding: 2px;
+}
+
+
+
+
+#sorular {
+    display: grid;
+    grid-template-rows: 50px 70px 1fr;
+    height: 314px;
+}
+#hi{
+    font-weight: bold;
+}
+#sorubas {
+    margin: 0 auto 0 auto;
+    width: 80%;
+    height: 40px;
+    color: rgb(0, 97, 153);
+    font-weight: bold;
+    font-size: 16px;
+    padding-top: 10px !important;
+}
+
+#options {
+    width: 100%;
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 100% !important;
+
+}
+
+#options button {
+    padding:0px!important;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px !important;
+    width: 100px !important;
+    height: 60px !important;
+
+}
+
+
+#soruyazi {
+    text-align: center;
+    margin: auto;
+    width: 1fr;
+
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+#bonus {
+    position: absolute;
+    top: 370px !important;
+    left: 95px !important;
+    margin: auto;
+    width: 150px;
+    height: 60px;
+    color: white;
+    font-weight: bold;
+    font-size: 26px;
+
+}
+
+.push {
+    border: yellow solid 2px;
+    box-shadow: black 1px 0px 15px 7px;
+}
+
+#entrance {
+    z-index: 0;
+    height: 620px !important;
+}
+
+.info {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all 5s ease;
+    display: nne;
+    position: absolute;
+    width: 360px;
+    height: 266px !important;
+    top: 0px;
+    border-radius: 15px;
+    color: whitesmoke;
+    background-color: #115173;
+    box-shadow: rgba(128, 128, 128, 0.719) 0px 0px 0px 850px;
+    margin: auto !important;
+}
+
+#mid p {
+    font-weight: bold;
+    margin: 6px 0 0 0 !important;
+    /* background-color: rgb(35, 59, 65); */
+    padding: 7px;
+    /* color: rgb(0, 97, 97);
+    background-color: azure; */
+    border-radius: 15px;
+}
+
+
+
+#bitismenü {
+    width: 360px;
+    z-index: 3;
+    margin: auto !important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all 5s ease;
+    position: absolute;
+    width: 360px;
+    top: 0px;
+    border-radius: 15px;
+    color: whitesmoke;
+    background-color: #115173;
+    height: 620px!important;
+    display: grid;
+    grid-template-rows: 0.5fr 1fr 2fr;
+}
+
+
+#mid {
+    display: noe !important;
+
+    margin: auto !important;
+    width: 340px;
+    height: 266px !important;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    justify-self: center;
+
+}
+
+.mid {
+    display: nne !important;
+    width: 360px;
+    /* height: 266px !important; */
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-self: center;
+    margin: auto;
+    height: 613px!important;
+
+}
+
+#bitismenü .badge {
+    width: 95%;
+    height: 50px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    color: white;
+    margin:10px auto!important;
+    background-color: rgb(211, 120, 1);
+}
+
+.table{
+    margin: 0 auto 5px auto;
+    width: 90%;
+    border-radius: 20px;
+}
+
+#restart {
+    margin:10px 0 0 0!important;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    justify-content: center;
+    height: 100px;
+    }
+
+#restart span {
+    text-align: center;
+    font-weight: bold;
+}
+
+#replay {
+    margin: 0 auto;
+    width: 60px;
+    border-radius: 20%;
+
+
+
+}
+
+#gamerestart {
+    margin: 0 auto;
+    width: 60px;
+    border-radius: 20%;
+    box-sizing: unset !important;
+
+
+
+}
+
+#load{
+    display: none;
+}
+
+
+#constant{
+    transition: all 3s ease;
+    background-color: rgb(211, 120, 1);
+    padding: 3px;
+    margin: 2px;
+    font-size: 18px;
+    border-radius: 15px;
+    color: black;
+    font-weight: bold;
+    display: inline-block;
+font-variant-caps: all-petite-caps;    
+}
+
+#replay:hover {
+    transition: ease all 0.3s;
+    width: 66px!important;
+    box-shadow: azure 0px 0px 10px 3px;
+    background-color: white;
+    cursor: pointer;
+}
+
+#gamerestart:hover {
+    transition: ease all 0.3s;
+    width: 66px;
+    box-shadow: azure 0px 0px 10px 3px;
+    cursor: pointer;
+    background-color: white;
+
+}
+
+form {
+    display: grid;
+}
+
+.input {
+    border: 1px solid rgb(211, 120, 1);
+    margin: 0px 15px;
+    padding: 0 4px;
+    height: 45px !important;
+    border-radius: 5px;
+}
+
+
+.goIn {
+    height: 50px !important;
+    margin-top: 15px !important;
+    margin-bottom: 5px !important;
+    width: 90%;
+    justify-self: center;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(211, 120, 1) !important;
+
+}
+
+.btn {
+    border-radius: 25px !important;
+}
+
+.badge {
+    border-radius: 20px !important;
+}
+
+
+#byk {
+    justify-self: center;
+}
+
+#basla {
+
+    width: 300px;
+    height: 140px;
+    background-color: rgb(0, 97, 153);
+    color: white;
+    font-weight: bold;
+    font-size: 46px;
+
+}
+
+#bas {
+
+    width: 300px;
+    height: 140px;
+    display: none;
+    font-size: 46px;
+    font-weight: bold;
+    transition: all ease 2s;
+
+}
+
+#options div {
+    display: grid;
+    justify-self: center;
+
+    padding: 3px;
+
+}
+
+iframe {
+    display: none;
+}
+
+#click{
+width: 250px;
+position: relative;
+bottom: 75px;
+right: -50px;
+border-radius: 50px;
+display: none;
+transition: ease all 2s;
+opacity: 0;
+animation-fill-mode: both;
+background-repeat: no-repeat;
+animation-duration: 5s;
+}
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+ }
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+ } 
+
+#signature{
+font-size: 28px;
+text-align: center;
+font-family: Athenia;
+position: relative;
+bottom: -160px;
+right: -205px;
+transform: rotate(-50deg);
+width: 155px;
+animation-fill-mode: both;
+background-repeat: no-repeat;
+animation-duration: 5s;
+}
+#form{
+    text-align: center;
+    width: 50%;
+    margin: 10px auto;
+}
+
+.loading{
+    text-align: center;
+}
+
+#likeThis{
+    position: absolute;
+    bottom: 200px;
+    right: 220px;
+    color:rgb(211, 120, 1);
+    transform: rotate(-50deg);
+    animation-duration: 3s;
+    display: none;
+    font-weight: 600;
+
+
+}
+
+@font-face {
+    font-family: "Athenia";
+   src:url("England Signature Italic.otf");
+    }
