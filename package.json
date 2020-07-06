@@ -46,13 +46,13 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/M-Halid/Game.git"
+    "url": "git+https://github.com/M-Halid/game.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/M-Halid/Game/issues"
+    "url": "https://github.com/M-Halid/game/issues"
   },
-  "homepage": "https://github.com/M-Halid/Game#readme"
+  "homepage": "https://github.com/M-Halid/game"
 }
