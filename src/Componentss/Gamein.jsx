@@ -580,7 +580,7 @@ class Gamein extends Component {
     }
 
     listallscores = () => {
-        const API_URL = "http://localhost:5000/score"
+        const API_URL = window.location.hostname === "localhost" ? "http://localhost:5000/score" : "https://halidsgame.vercel.app/score"
         fetch(API_URL)
             .then(response => response.json())
             .then(scores => {

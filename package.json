@@ -2,6 +2,9 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "proxy": "http://localhost:5000/",
   "dependencies": {
     "@capacitor/core": "1.5.2",
