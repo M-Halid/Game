@@ -580,8 +580,8 @@ class Gamein extends Component {
     }
 
     listallscores = () => {
-        const API_URL = window.location.hostname === "localhost" ? "http://localhost:5000/score" : "https://halidsgame.vercel.app/score"
-        fetch(API_URL)
+        const PORT = window.location.hostname === "localhost" ? "http://localhost:5000/score" : "https://tryithalid.herokuapp.com/"
+        fetch(PORT)
             .then(response => response.json())
             .then(scores => {
 
@@ -609,7 +609,7 @@ class Gamein extends Component {
 
 
 
-        const API_URL = window.location.hostname === "localhost" ? "http://localhost:5000/score" : "https://halidsgame.vercel.app/score"
+        const PORT = window.location.hostname === "localhost" ? "http://localhost:5000/score" : "https://tryithalid.herokuapp.com/"
 
 
 
@@ -621,7 +621,7 @@ class Gamein extends Component {
             score
         }
 
-        fetch(API_URL, {
+        fetch(PORT, {
             method: "POST",
             body: JSON.stringify(data),
             headers: {

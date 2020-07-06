@@ -3,7 +3,9 @@ const cors = require("cors")
 const monk = require("monk")
 const app = express()
 
-const db = monk(process.env.MONGO_URI || "localhost/Scores")
+const PORT = "https://my-app.m-halid.vercel.app/"
+
+const db = monk(process.env.MONGODB_URI || "localhost/Scores")
 const GameScores = db.get("GameScores")
 
 
@@ -14,7 +16,7 @@ app.use(express.json())
 
 app.get("/", (req, res) => {
     res.json({
-        message: "Miyaw hey🐈"
+        message: "Miyaw heyyo hey🐈"
     })
 })
 
@@ -52,7 +54,7 @@ app.post("/score", (req, res) => {
 }
 )
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
     console.log("Listening on http://localhost:5000");
 
 })

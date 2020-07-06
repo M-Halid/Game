@@ -13,6 +13,7 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
+    "cors": "^2.8.5",
     "react": "^16.13.0",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.0",
@@ -57,5 +58,5 @@
   "bugs": {
     "url": "https://github.com/M-Halid/game/issues"
   },
-  "homepage": "https://github.com/M-Halid/game"
+  "homepage": ""
 }
