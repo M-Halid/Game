@@ -1,5 +1,5 @@
 html {
-    height: 640px !important;
+    height: 670px !important;
     margin: 0 auto !important;
     padding: 0 !important;
     background-image: linear-gradient(#006699, #00cc99)
@@ -10,16 +10,17 @@ html {
     margin: auto !important;
     padding: 0 !important;
     width: 360px !important;
-    height: 620px !important;
+    height: 660px !important;
     box-sizing: border-box !important;
     background-image: linear-gradient(#006699, #00cc99)
 }
 
 #root {
+    border-radius: 15px;
     margin: auto !important;
     padding: 0 !important;
     width: 360px !important;
-    height: 620px !important;
+    height: 660px !important;
     box-sizing: border-box !important;
     background-image: linear-gradient(#006699, #00cc99)
 }
@@ -29,7 +30,7 @@ body {
     margin: auto !important;
     padding: 0 !important;
     width: 360px !important;
-    height: 620px !important;
+    height: 660px !important;
     box-sizing: border-box !important;
     background-image: linear-gradient(#006699, #00cc99)
 }
@@ -43,7 +44,7 @@ body {
     margin: 8px auto 0px auto !important;
     display: grid;
     width: 360px !important;
-    height: 620px !important;
+    height: 660px !important;
     grid-template-rows: 1fr 60px 4fr 2fr;
     background-image: linear-gradient(#006699, #00cc99)
 }
@@ -174,7 +175,7 @@ body {
 
 #entrance {
     z-index: 0;
-    height: 620px !important;
+    height: 660px !important;
 }
 
 .info {
@@ -216,7 +217,7 @@ body {
     border-radius: 15px;
     color: whitesmoke;
     background-color: #115173;
-    height: 620px!important;
+    height: 660px!important;
     display: grid;
     grid-template-rows: 0.5fr 1fr 2fr;
 }
@@ -282,6 +283,9 @@ body {
     margin: 0 auto;
     width: 60px;
     border-radius: 20%;
+    box-sizing: unset !important;
+    background-color:  rgb(211, 120, 1);
+    box-shadow: grey 1px 1px 10px 7px ;
 
 
 
@@ -291,7 +295,9 @@ body {
     margin: 0 auto;
     width: 60px;
     border-radius: 20%;
+    background-color:  rgb(211, 120, 1);
     box-sizing: unset !important;
+    box-shadow: grey 1px 1px 10px 7px ;
 
 
 

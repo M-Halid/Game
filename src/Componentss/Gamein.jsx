@@ -580,11 +580,10 @@ class Gamein extends Component {
     }
 
     listallscores = () => {
-        const PORT = window.location.hostname === "localhost" ? "http://localhost:5000/score" : "https://backendg.herokuapp.com/"
+        const PORT = window.location.hostname === "localhost" ? "http://localhost:5000/score" : "https://halidgame.herokuapp.com/"
         fetch(PORT)
             .then(response => response.json())
             .then(score => {
-
                 const orderd = score.sort((a, b) => parseInt(a.GameScore) > parseInt(b.GameScore) ? 1 : -1)
                 orderd.reverse()
                 console.table(orderd)
@@ -609,7 +608,7 @@ class Gamein extends Component {
 
 
 
-        const PORT = window.location.hostname === "localhost" ? "http://localhost:5000/score" : "https://backendg.herokuapp.com/"
+        const PORT = window.location.hostname === "localhost" ? "http://localhost:5000/score" : "https://halidgame.herokuapp.com/score"
 
 
 
