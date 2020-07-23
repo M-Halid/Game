@@ -538,7 +538,7 @@ class Gamein extends Component {
 
     sorusor = (i1, ia, ib, ic, id) => {
 
-        console.log(i1, ia, ib, ic, id)
+        // console.log(i1, ia, ib, ic, id)
         // this.setState({ soruyazi: i1, sec1: ia, sec2: ib, sec3: ic, sec4: id })
 
     }
@@ -580,8 +580,8 @@ class Gamein extends Component {
     }
 
     listallscores = () => {
-        const PORT = window.location.hostname === "localhost" ? "http://localhost:5000/score" : "https://halidgame.herokuapp.com/"
-        fetch(PORT)
+        const URL = "https://halidgame.herokuapp.com/"
+        fetch(URL)
             .then(response => response.json())
             .then(score => {
                 const orderd = score.sort((a, b) => parseInt(a.GameScore) > parseInt(b.GameScore) ? 1 : -1)
@@ -601,6 +601,8 @@ class Gamein extends Component {
                 this.setState({ s4: orderd[3].GameScore })
                 this.setState({ s5: orderd[4].GameScore })
 
+                console.log(this.state.s1)
+                console.log(this.state.s2)
             })
     }
 
@@ -608,10 +610,7 @@ class Gamein extends Component {
 
 
 
-        const PORT = window.location.hostname === "localhost" ? "http://localhost:5000/score" : "https://halidgame.herokuapp.com/score"
-
-
-
+        const URL = "https://halidgame.herokuapp.com/"
 
         const playerName = this.props.playerName
         const score = this.state.score
@@ -620,7 +619,7 @@ class Gamein extends Component {
             score
         }
 
-        fetch(PORT, {
+        fetch(URL, {
             method: "POST",
             body: JSON.stringify(data),
             headers: {

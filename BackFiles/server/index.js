@@ -4,7 +4,15 @@ const monk = require("monk")
 const app = express()
 
 
-const db = monk(process.env.MONGODB_URI || "localhost/score")
+const db = monk('mongodb+srv://Halid:4534Mongo.@cluster0.7e6me.mongodb.net/score?retryWrites=true&w=majority')
+db.then(() => {
+    console.log("connected")
+}
+).catch((err) => {
+    console.log("database connection failed")
+    console.log(err)
+})
+
 const score = db.get("score")
 
 
@@ -13,24 +21,36 @@ app.enable('trust proxy');
 app.use(cors())
 app.use(express.json())
 
-app.get("/", (req, res) => {
+
+app.get("/score", (req, res) => {
+
     res.json({
-        message: "Miyaw hi haloo  heyyy🐈"
+        message: "Miyaw hi haloo asd heyyy🐈"
     })
 })
 
 
 
-app.get("/score", (req, res) => {
+app.get("/", (req, res, next) => {
+    console.log("HI!")
+
     score
-        .find()
+        .find({})
         .then(score => {
+            console.log("HI wieder!")
             res.json(score)
-        })
+            console.table(score)
+        }).catch((err) => {
+            console.log("Fehler:" + err)
+            next()
+        });
+
+
+
 })
 
 
-app.post("/score", (req, res) => {
+const createScore = (req, res, next) => {
 
 
     const data = {
@@ -43,20 +63,25 @@ app.post("/score", (req, res) => {
         .insert(data)
         .then(createdScore => {
             res.json(createdScore)
-        })
+        }).catch(next);
 
 
 
 }
-)
 
-let port = process.env.PORT;
-if (port == null || port == "") {
-    port = 5000;
-}
-app.listen(port);
 
-// app.listen(PORT, () => {
-//     console.log("Listening on http://localhost:PORT");
+app.post('/', createScore)
 
-// })
+app.use((error, req, res, next) => {
+    res.status(500);
+    res.json({
+        message: error.message
+    });
+});
+
+const PORT = process.env.PORT || 5000;
+
+
+const server = app.listen(PORT, () => console.log(`Listening on http://localhost:${PORT}`))
+
+server.timeout = 1000
