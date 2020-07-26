@@ -8,6 +8,8 @@ import game from './game.png';
 import time from './time.png';
 import witz from "./witz.gif"
 import { Table } from 'react-bootstrap';
+import point from './point.mp3';
+import win from './win game.mp3';
 
 
 
@@ -266,6 +268,9 @@ class Gamein extends Component {
                 clearInterval(timer)
                 clearInterval(score)
                 this.getFromServer()
+
+                let audio = new Audio(win)
+                audio.play()
             }
             if (this.state.game < 1) {
                 // localStorage.setItem(this.props.playerName, this.state.score)
@@ -275,6 +280,9 @@ class Gamein extends Component {
                 clearInterval(timer)
                 clearInterval(score)
                 this.getFromServer()
+
+                let audio = new Audio(win)
+                audio.play()
             }
 
 
@@ -399,6 +407,8 @@ class Gamein extends Component {
         const cdf = document.querySelector("#starbucks")
         cdf.appendChild(asd)
 
+        let audio = new Audio(point)
+        audio.play()
     }
 
 
@@ -580,7 +590,7 @@ class Gamein extends Component {
     }
 
     listallscores = () => {
-        const URL = "https://halidgame.herokuapp.com/"
+        const URL = "https://backsite.azurewebsites.net/"
         fetch(URL)
             .then(response => response.json())
             .then(score => {
@@ -610,7 +620,7 @@ class Gamein extends Component {
 
 
 
-        const URL = "https://halidgame.herokuapp.com/"
+        const URL = "https://backsite.azurewebsites.net/"
 
         const playerName = this.props.playerName
         const score = this.state.score
@@ -633,7 +643,7 @@ class Gamein extends Component {
             })
         setTimeout(() => {
             this.listallscores()
-        }, 300);
+        }, 10);
 
 
 

@@ -458,7 +458,7 @@ animation-duration: 5s;
 
 #likeThis{
     position: absolute;
-    bottom: 200px;
+    bottom: 220px;
     right: 220px;
     color:rgb(211, 120, 1);
     transform: rotate(-50deg);

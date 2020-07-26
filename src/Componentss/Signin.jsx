@@ -71,6 +71,9 @@ class Signin extends Component {
             like.style.display = "block"
         }, 3500);
 
+        var bgmusic = document.querySelector("audio")
+        bgmusic.volume = 0.02;
+
     }
 
 
