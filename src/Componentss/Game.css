@@ -2,7 +2,8 @@ html {
     height: 670px !important;
     margin: 0 auto !important;
     padding: 0 !important;
-    background-image: linear-gradient(#006699, #00cc99)
+    background-color: #115173;
+
 }
 
 #App {
@@ -12,7 +13,13 @@ html {
     width: 360px !important;
     height: 660px !important;
     box-sizing: border-box !important;
-    background-image: linear-gradient(#006699, #00cc99)
+    background-color: #115173;
+    @media screen and (max-width: 320px) {
+        
+          
+          width: 320px;
+          height: 540px;
+        }
 }
 
 #root {
@@ -22,17 +29,17 @@ html {
     width: 360px !important;
     height: 660px !important;
     box-sizing: border-box !important;
-    background-image: linear-gradient(#006699, #00cc99)
+    background-color: #115173;
 }
 
 body {
-    border-radius: 10px;
+    border-radius: 15px;
     margin: auto !important;
     padding: 0 !important;
     width: 360px !important;
     height: 660px !important;
     box-sizing: border-box !important;
-    background-image: linear-gradient(#006699, #00cc99)
+    background-color: #115173;
 }
 
 
@@ -46,7 +53,12 @@ body {
     width: 360px !important;
     height: 660px !important;
     grid-template-rows: 1fr 60px 4fr 2fr;
-    background-image: linear-gradient(#006699, #00cc99)
+    background-image: linear-gradient(#006699, #00cc99);
+    border-radius: 15px;
+}
+tr{
+    border-radius: 15px;
+    
 }
 
 /* #frame {
@@ -154,19 +166,24 @@ body {
     font-size: 20px;
 
 }
-
+#bonus1{
+    position: relative;
+    display: flex;
+    top: 250px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
 #bonus {
-    position: absolute;
-    top: 370px !important;
-    left: 95px !important;
-    margin: auto;
-    width: 150px;
-    height: 60px;
+    width: 180px;
+    height: 65px;
     color: white;
     font-weight: bold;
-    font-size: 26px;
+    font-size: 28px;
 
 }
+
+
 
 .push {
     border: yellow solid 2px;

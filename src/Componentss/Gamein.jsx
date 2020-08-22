@@ -269,10 +269,8 @@ class Gamein extends Component {
                 clearInterval(score)
                 this.getFromServer()
 
-                let audio = new Audio(win)
-                audio.play()
             }
-            if (this.state.game < 1) {
+            if (this.state.game < 10) {
                 // localStorage.setItem(this.props.playerName, this.state.score)
                 this.setState({
                     son: true
@@ -281,8 +279,7 @@ class Gamein extends Component {
                 clearInterval(score)
                 this.getFromServer()
 
-                let audio = new Audio(win)
-                audio.play()
+
             }
 
 
@@ -590,14 +587,12 @@ class Gamein extends Component {
     }
 
     listallscores = () => {
-        const URL = "https://backsite.azurewebsites.net/"
+        const URL = "https://halidgame.herokuapp.com/"
         fetch(URL)
             .then(response => response.json())
             .then(score => {
                 const orderd = score.sort((a, b) => parseInt(a.GameScore) > parseInt(b.GameScore) ? 1 : -1)
                 orderd.reverse()
-                console.table(orderd)
-
 
                 this.setState({ n1: orderd[0].PlayerName })
                 this.setState({ n2: orderd[1].PlayerName })
@@ -611,8 +606,6 @@ class Gamein extends Component {
                 this.setState({ s4: orderd[3].GameScore })
                 this.setState({ s5: orderd[4].GameScore })
 
-                console.log(this.state.s1)
-                console.log(this.state.s2)
             })
     }
 
@@ -620,7 +613,7 @@ class Gamein extends Component {
 
 
 
-        const URL = "https://backsite.azurewebsites.net/"
+        const URL = "https://halidgame.herokuapp.com/"
 
         const playerName = this.props.playerName
         const score = this.state.score
@@ -750,7 +743,8 @@ class Gamein extends Component {
 
                 <div id="starbucks" >
 
-                </div><div> {this.state.bonus === true ? <button id="bonus" onClick={this.sor} className="btn btn-warning " >Open </button> : null}
+                </div>
+                <div> {this.state.bonus === true ? <div id="bonus1"> <button id="bonus" onClick={this.sor} className="btn btn-warning " >OPEN </button> </div> : null}
 
                     {this.state.soru === true ? <div id="sorular" >
                         <span id="sorubas" className="badge badge-warning p-2 "> Answer the question! </span><span id="soruyazi"> {soruyazi} </span>
@@ -758,7 +752,8 @@ class Gamein extends Component {
                             <div onClick={this.cevap}> <button onClick={e => { this.setState({ cevap: e.currentTarget.innerText }) }} className="btn btn-secondary m-1 p-2" > {sec1} </button></div>
                             <div onClick={this.cevap}> <button onClick={e => { this.setState({ cevap: e.currentTarget.innerText }) }} className="btn btn-secondary m-1 p-2"> {sec2} </button></div>
                             <div onClick={this.cevap}> <button onClick={e => { this.setState({ cevap: e.currentTarget.innerText }) }} className="btn btn-secondary m-1 p-2" > {sec3} </button></div>
-                            <div onClick={this.cevap}> <button onClick={e => { this.setState({ cevap: e.currentTarget.innerText }) }} className="btn btn-secondary m-1 p-2" > {sec4} </button></div> </div></div> : null} </div>
+                            <div onClick={this.cevap}> <button onClick={e => { this.setState({ cevap: e.currentTarget.innerText }) }} className="btn btn-secondary m-1 p-2" > {sec4} </button></div> </div></div> : null}
+                </div>
 
 
                 <div id="byk" > <button onClick={this.plus} id="bas" className="btn btn-success " > CLICK IT! </button> <button onClick={this.start}
